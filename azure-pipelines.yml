@@ -21,7 +21,7 @@ steps:
       latest
 - script: |
     echo "Replacing vars in k8s/web-app.yaml"
-    sed -i 's/BUILDNUM/$(Build.BuildNumber)/g; s/AKSURL/$(aksurl)/g; s/ACRURL/$(acrurl)/g' k8s/net-app.yaml
+    sed -i 's/BUILDNUM/$(Build.BuildNumber)/g; s/AKSURL/$(aksurl)/g; s/ACRURL/$(acrurl)/g' k8s/web-app.yaml
     cat k8s/web-app.yaml
     echo "Replaced it"
   displayName: 'Replace vars in k8s yaml'
